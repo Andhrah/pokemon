@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Pokedex from './Pokedex';
 class Pokegame extends Component {
   static defaultProps = {
-    pokemon: [
+    pokemonData: [
       {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
       {id: 7, name: 'Squirtle', type: 'water', base_experience: 63},
       {id: 11, name: 'Metapod', type: 'bug', base_experience: 72},
@@ -15,7 +15,7 @@ class Pokegame extends Component {
   };
   render() {
     let hand1 = [];
-    let hand2 = [...this.props.pokemon];
+    let hand2 = [...this.props.pokemonData];
 
     while(hand1.length < hand2.length){
       let randomIdx = Math.floor(Math.random() * hand2.length);
